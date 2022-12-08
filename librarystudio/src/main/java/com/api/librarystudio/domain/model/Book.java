@@ -20,6 +20,9 @@ public class Book {
 
     @Column(nullable = false)
     private String synopsis;
+
+    @Column(nullable = false)
+    private String pdf;
     
     
     @ManyToOne
@@ -42,7 +45,13 @@ public class Book {
         this.image = image;
     }
 
+    public String getPdf() {
+        return pdf;
+    }
 
+    public void setPdf(String pdf) {
+        this.pdf = pdf;
+    }
 
     public String getTitle() {
         return title;
